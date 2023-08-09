@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 264.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #22806c;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #22806c;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Warstwa_1" data-name="Warstwa 1">
+    <line class="cls-1" x1="4.5" x2="4.5" y2="220"/>
+    <circle class="cls-2" cx="4.5" cy="259.56" r="4.5"/>
+  </g>
+</svg>

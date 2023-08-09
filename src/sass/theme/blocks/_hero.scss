@@ -1,0 +1,116 @@
+img.parallax-slider {
+    margin-top: 40px;
+}
+.theme-dark {
+    .hero {
+        .container-xl {
+            background-image: url(../img/hero-background--wo.svg);
+        }
+    }
+}
+.theme-light {
+    .hero {
+        .container-xl {
+            background-image: url(../img/hero-background--dark.svg);
+        }
+    }
+}
+
+.hero {
+    padding-top: 2rem;
+    .container-xl {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: calc(50vh - var(--h-top));
+        min-height: 500px;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        position: relative;
+        isolation: isolate;
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, hsl(var(--hsl-background) / 0.9) 80%);
+            z-index: -1;
+        }
+    }
+
+    .layer-1 {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-content: center;
+    }
+    .layer-2 {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        align-content: end;
+    }
+
+    h1 {
+        color: var(--text);
+        font-size: 2rem;
+        font-size: var(--fs-900);
+        font-weight: var(--fw-600);
+        line-height: 1.2;
+        text-align: center;
+        width: min(20ch,90vw);
+        span {
+            background-color: hsl(var(--hsl-background) / 0.8);
+            box-shadow: 10px 0 0 hsl(var(--hsl-background) / 0.8), -10px 0 0 hsl(var(--hsl-background) / 0.8);
+            -webkit-box-decoration-break: clone;
+        }
+    }
+
+}
+
+#mouse-icon {
+    width: 28px;
+    height: 60px;
+    #marker {
+        animation: pulse 2s linear infinite;
+    }
+}
+.theme-dark {
+    #mouse {
+        .cls-1 {
+            fill: var(--col-light-400);
+        }
+    }
+    #dot {
+        .cls-2 {
+            fill: var(--col-red-400);
+        }
+    }
+}
+.theme-light {
+    #mouse {
+        .cls-1 {
+            fill: var(--col-dark-400);
+        }
+    }
+    #dot {
+        .cls-2 {
+            fill: var(--col-green-400);
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
