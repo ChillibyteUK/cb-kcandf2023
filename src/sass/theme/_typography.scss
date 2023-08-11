@@ -11,16 +11,16 @@
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/open-sans-v35-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-weight: 500;
+    src: url('../fonts/open-sans-v35-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* open-sans-700 - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/open-sans-v35-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-weight: 600;
+    src: url('../fonts/open-sans-v35-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
 :root {
@@ -45,7 +45,7 @@ body {
 
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h99 {
-    font-family: 'Hind', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     margin-bottom: 0.5rem;
     font-weight: var(--fw-600);
@@ -79,4 +79,59 @@ strong, b {
 
 .has-small-font-size {
     font-size: var(--fs-200);
+}
+
+.lined-title {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: space-around;
+    margin: 5rem auto;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-size: var(--fs-400);
+    letter-spacing: 0.15em;
+    &::before, &::after {
+        content: '';
+        flex-grow: 1;
+        max-width: 200px;
+        margin: 0 4px;
+    }
+}
+
+.theme-dark {
+    .lined-title::before, .lined-title::after {
+        background: linear-gradient(to right, var(--col-red-400), var(--col-red-400));
+        background-size: 100% 2px;
+        background-position: 0% 50%;
+        background-repeat: repeat-x;
+    }
+}
+.theme-light {
+    .lined-title {
+        color: var(--col-green-400);
+        &::before, &::after {
+            background: linear-gradient(to right, var(--col-green-400), var(--col-green-400));
+            background-size: 100% 2px;
+            background-position: 0% 50%;
+            background-repeat: repeat-x;
+        }
+    }
+}
+
+.theme-dark {
+    .dot {
+        &::after {
+            content: ".";
+            color: var(--col-red-400);
+        }
+    }
+}
+.theme-light {
+    .dot {
+        &::after {
+            content: ".";
+            color: var(--col-green-400);
+        }
+    }
 }

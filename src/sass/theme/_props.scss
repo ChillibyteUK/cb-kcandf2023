@@ -8,7 +8,8 @@ $col-grey: #FFF0F0;
 :root {
 
     --hsl-dark-400: 229deg 27% 8%; 
-    --hsl-light-400: 0deg 14% 93%; 
+    // --hsl-light-400: 0deg 14% 93%; 
+    --hsl-light-400: 0deg 14% 100%; 
     --hsl-green-400: 167.23deg 58.02% 31.76%; 
     --hsl-red-400: 350deg 78% 49%; 
 
@@ -21,7 +22,7 @@ $col-grey: #FFF0F0;
 
     --fw-400: 300;
     --fw-600: 500;
-    --fw-700: 700;
+    --fw-700: 600;
 
     // --fs-900: 80px;
     --fs-900: clamp(1.96rem, 2.84vw + 1.56rem, 2.86rem);
@@ -34,6 +35,7 @@ $col-grey: #FFF0F0;
     --fs-400: clamp(0.64rem, 1.14vw + 0.48rem, 1rem);
     --fs-300: 22px;
     --fs-200: 18px;
+    --fs-100: 16px;
 
     --transition: 0.3s ease-out;
 

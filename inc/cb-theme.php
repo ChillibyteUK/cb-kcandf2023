@@ -65,7 +65,8 @@ function widgets_init()
     // );
 
     register_nav_menus(array(
-        'primary_nav' => __('Primary Nav', 'cb-kcandf2023'),
+        'agency_nav' => __('Agency Nav', 'cb-kcandf2023'),
+        'pharma_nav' => __('Pharma Nav', 'cb-kcandf2023'),
         //     'footer_menu1' => __('Footer Menu 1', 'cb-kcandf2023'),
         //     'footer_menu2' => __('Footer Menu 2', 'cb-kcandf2023'),
     ));

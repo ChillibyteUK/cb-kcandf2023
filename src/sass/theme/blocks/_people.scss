@@ -1,0 +1,53 @@
+.theme-dark {
+    .people {
+        --text-color: var(--col-red-400);
+        --text: #fff;
+    }
+}
+
+.theme-light {
+    .people {
+        --text-color: var(--col-green-400);
+        --text: var(--col-dark-400);
+    }
+}
+
+.people {
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    &__card {
+        width: min( 30%, 90vw);
+        min-width: 400px;
+    }
+    &__image {
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 3 / 4;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    &__name {
+        text-transform: uppercase;
+        color: var(--text-color);
+        font-weight: var(--fw-700);
+        font-size: var(--fs-300);
+        letter-spacing: 0.15em;
+        margin-bottom: 0.5rem;
+    }
+    &__role {
+        text-transform: uppercase;
+        color: var(--text);
+        font-weight: var(--fw-700);
+        margin-bottom: 1.5rem;
+        font-size: var(--fs-100);
+        letter-spacing: 0.15em;
+    }
+    &__bio {
+        font-size: var(--fs-300);
+    }
+}

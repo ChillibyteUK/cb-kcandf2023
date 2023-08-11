@@ -1,14 +1,15 @@
 <?php
 
-function cb_register_post_types() {
+function cb_register_post_types()
+{
 
     $labels = [
-        "name" => __( "Case Studies", "cb-kcandf2023" ),
-        "singular_name" => __( "Case Study", "cb-kcandf2023" ),
+        "name" => __("Case Studies", "cb-kcandf2023"),
+        "singular_name" => __("Case Study", "cb-kcandf2023"),
     ];
 
     $args = [
-        "label" => __( "Case Studies", "cb-kcandf2023" ),
+        "label" => __("Case Studies", "cb-kcandf2023"),
         "labels" => $labels,
         "description" => "",
         "public" => true,
@@ -33,33 +34,69 @@ function cb_register_post_types() {
         "exclude_from_search" => true
     ];
 
-    register_post_type( "case-studies", $args );
+    register_post_type("case-studies", $args);
+
+    $labels = [
+        "name" => __("People", "cb-kcandf2023"),
+        "singular_name" => __("Person", "cb-kcandf2023"),
+    ];
+
+    $args = [
+        "label" => __("People", "cb-kcandf2023"),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => false,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "rest_controller_class" => "WP_REST_Posts_Controller",
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "menu_icon" => "dashicons-open-folder",
+        "delete_with_user" => false,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => false,
+        "query_var" => true,
+        "supports" => [ "title" ],
+        "show_in_graphql" => false,
+        "exclude_from_search" => true
+    ];
+
+    register_post_type("people", $args);
 
 }
-add_action( 'init', 'cb_register_post_types' );
+add_action('init', 'cb_register_post_types');
 
 
 // ************* Remove default Posts type since no blog *************
 
 // Remove side menu
-add_action( 'admin_menu', 'remove_default_post_type' );
+add_action('admin_menu', 'remove_default_post_type');
 
-function remove_default_post_type() {
-    remove_menu_page( 'edit.php' );
+function remove_default_post_type()
+{
+    remove_menu_page('edit.php');
 }
 
 // Remove +New post in top Admin Menu Bar
-add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
+add_action('admin_bar_menu', 'remove_default_post_type_menu_bar', 999);
 
-function remove_default_post_type_menu_bar( $wp_admin_bar ) {
-    $wp_admin_bar->remove_node( 'new-post' );
+function remove_default_post_type_menu_bar($wp_admin_bar)
+{
+    $wp_admin_bar->remove_node('new-post');
 }
 
 // Remove Quick Draft Dashboard Widget
-add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
+add_action('wp_dashboard_setup', 'remove_draft_widget', 999);
 
-function remove_draft_widget(){
-    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+function remove_draft_widget()
+{
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
 }
 
 // End remove post type

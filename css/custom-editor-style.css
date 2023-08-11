@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root {
   --hsl-dark-400: 229deg 27% 8%;
-  --hsl-light-400: 0deg 14% 93%;
+  --hsl-light-400: 0deg 14% 100%;
   --hsl-green-400: 167.23deg 58.02% 31.76%;
   --hsl-red-400: 350deg 78% 49%;
   --col-dark-400: hsl(var(--hsl-dark-400));
@@ -11,7 +11,7 @@
   --h-top: 122px;
   --fw-400: 300;
   --fw-600: 500;
-  --fw-700: 700;
+  --fw-700: 600;
   --fs-900: clamp(1.96rem, 2.84vw + 1.56rem, 2.86rem);
   --fs-700: clamp(1.07rem, 2.27vw + 0.75rem, 1.79rem);
   --fs-600: clamp(0.86rem, 1.82vw + 0.6rem, 1.43rem);
@@ -19,6 +19,7 @@
   --fs-400: clamp(0.64rem, 1.14vw + 0.48rem, 1rem);
   --fs-300: 22px;
   --fs-200: 18px;
+  --fs-100: 16px;
   --transition: 0.3s ease-out;
 }
 

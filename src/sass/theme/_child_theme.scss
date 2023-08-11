@@ -14,11 +14,14 @@
     --col-background: var(--col-dark-400);
     --hsl-background: var(--hsl-dark-400);
     --text: var(--col-light-400);
+    --highlight: var(--col-red-400);
 }
 .theme-light {
     --col-background: var(--col-light-400);
+    // --col-background: #fff;
     --hsl-background: var(--hsl-light-400);
     --text: var(--col-dark-400);
+    --highlight: var(--col-green-400);
 }
 
 body {
@@ -107,6 +110,17 @@ a.anchor {
     font-style: italic;
 }
 
+.feature-link {
+    color: var(--highlight);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-600);
+    &::before {
+        content: "\f044";
+        font-family: 'font awesome 6 free';
+        font-weight: 600;
+        margin-right: 0.75rem;
+    }
+}
 
 // show stuff that overflows horizontally
 // * {
