@@ -8,7 +8,7 @@ $class = $block['className'] ?? null;
             <?php
             foreach (get_field('team') as $t) {
                 ?>
-            <div class="people__card">
+            <div class="people__card" data-aos="fade">
                 <img class="people__image"
                     src="<?=wp_get_attachment_image_url(get_field('headshot', $t), 'large')?>">
                 <div class="people__name"><?=get_the_title($t)?>
