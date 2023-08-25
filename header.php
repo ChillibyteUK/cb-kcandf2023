@@ -171,8 +171,8 @@ if (is_page('health')) {
 }
 ?>
     <div id="wrapper-navbar" class="sticky-top">
-        <nav class="navbar p-0">
-            <div class="container-xl">
+        <nav class="navbar p-0 pt-2">
+            <div class="container-xl pb-2">
                 <?php
                 $home = get_field('theme') == 'Dark' ? '/' : '/health/';
 ?>

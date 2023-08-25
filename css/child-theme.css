@@ -21322,9 +21322,6 @@ strong, b {
   gap: 1rem;
 }
 
-#wrapper-navbar {
-  padding-block: 0.5rem;
-}
 #wrapper-navbar .logo {
   background-position: center;
   background-repeat: no-repeat;
