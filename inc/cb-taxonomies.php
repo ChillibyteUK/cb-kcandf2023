@@ -23,7 +23,7 @@ function cb_register_taxes()
         "show_in_quick_edit" => true,
         "show_in_graphql" => false,
     ];
-    register_taxonomy("sectors", [ "case-studies" ], $args);
+    // register_taxonomy("sectors", [ "case-studies" ], $args);
 
     $args = [
         "label" => __("Process", "cb-kcandf2023"),
