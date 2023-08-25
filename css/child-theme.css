@@ -21820,7 +21820,7 @@ img.parallax-slider {
 }
 .case_study h2, .case_study .h2, .case_study .section_hero__number {
   font-weight: var(--fw-400);
-  max-width: 600px;
+  max-width: 700px;
   margin-inline: auto;
   text-wrap: balance;
   line-height: 1.3;
