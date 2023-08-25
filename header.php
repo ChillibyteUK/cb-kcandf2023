@@ -27,9 +27,6 @@ session_start();
     <link rel="preload"
         href="<?=get_stylesheet_directory_uri()?>/fonts/open-sans-v35-latin-600.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/open-sans-v35-latin-700.woff2"
-        as="font" type="font/woff2" crossorigin="anonymous">
     <?php
 if (get_field('ga_property', 'options')) {
     ?>
