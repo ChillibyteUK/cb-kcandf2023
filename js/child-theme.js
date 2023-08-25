@@ -9328,9 +9328,12 @@
 	      }
 
 	      div.appendChild(thumbNode);
-	      var playButton = document.createElement('div');
-	      playButton.setAttribute('class', 'play');
-	      div.appendChild(playButton);
+
+	      if (playerElements[n].dataset.play !== '') {
+	        var playButton = document.createElement('div');
+	        playButton.setAttribute('class', 'play');
+	        div.appendChild(playButton);
+	      }
 
 	      div.onclick = function () {
 	        labnolIframe(this);
