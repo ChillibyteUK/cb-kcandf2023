@@ -1,3 +1,63 @@
+.theme-dark {
+    .case_study--branding {
+        .case_study__hero {
+            background-image: url(../img/bg-curves--wo.svg);
+        }
+        .case_study__process {
+            color: var(--col-red-400);
+        }
+    }
+}
+.theme-light {
+    .case_study--branding {
+        .case_study__hero {
+            background-image: url(../img/bg-curves--dark.svg);
+        }
+        .case_study__process {
+            color: var(--col-green-400);
+        }
+    }
+}
+
+.case_study {
+    &__hero {
+        min-height: 480px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        isolation: isolate;
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: hsl(var(--hsl-dark-400) / 0.8);
+            z-index: -1;
+        }
+
+        display: grid;
+        place-content: center;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    &__process {
+        font-size: var(--fs-500);
+    }
+
+
+    h2 {
+        font-weight: var(--fw-400);
+    }
+
+    h3 {
+        font-size: var(--fs-400);
+        font-weight: var(--fw-700);
+        margin-bottom: 0;
+    }
+
+}
+
+/*
 .case_study {
     padding-top: calc(var(--h-top) + 2rem);
     @media (min-width:768px) {
@@ -141,3 +201,4 @@
         }
     }
 }
+*/

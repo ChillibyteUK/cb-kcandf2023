@@ -17,8 +17,8 @@
                 "id": ""
             },
             "choices": {
-                "Dark": "Dark",
-                "Light": "Light"
+                "Dark": "Agency",
+                "Light": "Pharma"
             },
             "default_value": "Dark",
             "return_format": "value",
@@ -35,6 +35,13 @@
                 "operator": "==",
                 "value": "default"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case-studies"
+            }
         ]
     ],
     "menu_order": 0,
@@ -46,5 +53,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691500866
+    "modified": 1692957597
 }
