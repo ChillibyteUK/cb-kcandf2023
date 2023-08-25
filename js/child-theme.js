@@ -9329,7 +9329,7 @@
 
 	      div.appendChild(thumbNode);
 
-	      if (playerElements[n].dataset.play !== '') {
+	      if (playerElements[n].dataset.play === 'true') {
 	        var playButton = document.createElement('div');
 	        playButton.setAttribute('class', 'play');
 	        div.appendChild(playButton);

@@ -29,7 +29,7 @@ AOS.init({
             thumbNode.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace('ID', videoId);
         }
         div.appendChild(thumbNode);
-        if (playerElements[n].dataset.play !== '') {
+        if (playerElements[n].dataset.play === 'true') {
           var playButton = document.createElement('div');
           playButton.setAttribute('class', 'play');
           div.appendChild(playButton);
