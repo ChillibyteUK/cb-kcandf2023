@@ -21785,14 +21785,20 @@ img.parallax-slider {
 .theme-dark .case_study--branding .case_study__hero {
   background-image: url(../img/bg-curves--wo.svg);
 }
-.theme-dark .case_study--branding .case_study__process {
+.theme-dark .case_study--production .case_study__hero {
+  background-image: url(../img/bg-herringbone--wo.svg);
+}
+.theme-dark .case_study__process {
   color: var(--col-red-400);
 }
 
 .theme-light .case_study--branding .case_study__hero {
   background-image: url(../img/bg-curves--dark.svg);
 }
-.theme-light .case_study--branding .case_study__process {
+.theme-light .case_study--production .case_study__hero {
+  background-image: url(../img/bg-herringbone--dark.svg);
+}
+.theme-light .case_study__process {
   color: var(--col-green-400);
 }
 
