@@ -12,6 +12,11 @@
     .case_study__process {
         color: var(--col-red-400);
     }
+    .caseStudies {
+        .case_study__hero {
+            background-image: url(../img/bg-topography--wo.svg);
+        }
+    }
 }
 .theme-light {
     .case_study--branding {
@@ -27,6 +32,12 @@
     .case_study__process {
         color: var(--col-green-400);
     }
+    .caseStudies {
+        .case_study__hero {
+            background-image: url(../img/bg-topography--dark.svg);
+            margin-bottom: 3rem;
+        }
+    }
 }
 
 .case_study {
@@ -37,7 +48,7 @@
         background-repeat: no-repeat;
         position: relative;
         isolation: isolate;
-        &::after {
+        &::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -69,8 +80,46 @@
         margin-bottom: 0;
     }
 
+    &__nav {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: var(--fs-300);
+        z-index: 999;
+        span {
+            padding-inline: 0.25rem;
+            color: var(--col-red-400);
+            font-size: 1rem;
+        }
+    }
+
 }
 
+.caseStudies {
+    .case_study__hero {
+        margin-bottom: 2rem;
+    }
+
+    .btn-red:not(.active) {
+        background-color: transparent;
+        border: 1px solid var(--col-red-400);
+    }
+}
+
+#csgrid {
+    .caseStudy {
+        padding-inline: 0.25rem;
+        &_card {
+            display: block;
+            width: 100%;
+            outline: 1px solid white;
+            margin-bottom: 0.5rem;
+            &__content {
+                padding: 0.5rem;
+            }
+        }
+    }
+}
 /*
 .case_study {
     padding-top: calc(var(--h-top) + 2rem);

@@ -25,6 +25,26 @@ $style = $terms[0]->slug;
             <div class="case_study__process" data-aos="fade">
                 <?=$term?>
             </div>
+            <div class="case_study__nav">
+                <?php
+$prev_post = get_previous_post();
+if($prev_post) {
+    $prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
+    echo '<a rel="prev" href="' . get_permalink($prev_post->ID) . '" title="' . $prev_title. '" class=" ">previous</a>';
+}
+
+$next_post = get_next_post();
+
+if ($prev_post && $next_post) {
+    echo '<span>|</span>';
+}
+
+if($next_post) {
+    $next_title = strip_tags(str_replace('"', '', $next_post->post_title));
+    echo '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class=" ">next</a>';
+}
+?>
+            </div>
         </div>
 
         <?=apply_filters('the_content', get_the_content())?>
