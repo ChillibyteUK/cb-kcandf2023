@@ -1,3 +1,11 @@
 .bg--dark {
     background-color: var(--col-dark-400);
 }
+
+.text-red {
+    color: var(--col-red-400);
+}
+
+a.text-white:hover {
+    color: var(--col-red-400) !important;
+}

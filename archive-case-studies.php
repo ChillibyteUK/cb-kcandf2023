@@ -41,12 +41,13 @@ while (have_posts()) {
             <div class="<?=$catclass?> caseStudy col-md-6 col-lg-4">
                 <a class="caseStudy_card"
                     href="<?=get_the_permalink()?>">
-                    <div class="caseStudy_card__image">
-                        <img src="<?=$img?>" alt="">
-                    </div>
+                    <img class="caseStudy_card__image" src="<?=$img?>" alt="">
                     <div class="caseStudy_card__content">
-                        <div class="article-title mb-2">
+                        <div class="article-title">
                             <?=get_the_title()?>
+                        </div>
+                        <div class="article-category">
+                            <?=$cats[0]->name?>
                         </div>
                     </div>
                 </a>
@@ -80,8 +81,27 @@ add_action('wp_footer', function () {
             $grid.isotope({
                 filter: filterValue
             });
+            console.log(filterValue);
+            if (filterValue != '*') {
+                toggleCategory('off');
+            }
+            else {
+                toggleCategory('on');
+            }
         });
 
+        function toggleCategory(state) {
+            const elem = document.querySelectorAll(".article-category");
+            elem.forEach((thing) => {
+                if (state === 'off') {
+                    console.log('x');
+                    thing.classList.add('d-none');
+                }
+                else {
+                    thing.classList.remove('d-none');
+                }
+            })
+        }
 
 
     })(jQuery);

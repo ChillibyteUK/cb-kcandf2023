@@ -53,7 +53,17 @@ if($next_post) {
     <section class="line_block">
         <div class="line_block__line" data-aos="fade"></div>
         <div class="container-xl">
-            <div class="h2 text-center dot" data-aos="fade">Our friends won't let you down</div>
+        <div class="case_study__footer-nav">
+                <?php
+echo '<a href="/case-studies/" class="text-red">back</a>';
+$next_post = get_next_post();
+
+if($next_post) {
+    $next_title = strip_tags(str_replace('"', '', $next_post->post_title));
+    echo '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="text-white">next</a>';
+}
+?>
+            </div>
         </div>
     </section>
 </main>
