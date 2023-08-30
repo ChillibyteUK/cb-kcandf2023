@@ -3,36 +3,12 @@
     border-radius: 0.25rem;
     font-weight: var(--fw-700);
     font-size: var(--fs-200);
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
     min-width: 280px;
     text-transform: uppercase;
 
-    &-text {
-        padding-right: 0;
-        position: relative;
-        right: -8px;
-        transition: right var(--transition);
-        will-change: right, padding;
-    }
-    &-arrow {
-        opacity: 0;
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        background-size: 16px 16px;
-        transition: opacity var(--transition),transform var(--transition);
-        will-change: opacity;
-    }
     &:hover {
         color: var(--col-light-400);
-        .btn-text {
-            right: 0;
-            transform: translate3d(-4px, 1px 0);
-        }
-        .btn-arrow {
-            transform: translate3d(4px, 0, 0);
-            opacity: 1;
-        }
     }
 
 }
