@@ -22120,14 +22120,14 @@ readers do not read off random characters that represent icons */
 }
 
 html {
-  font-size: 28px;
+  font-size: 26px;
 }
 
 body {
   font-family: "Open Sans", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: var(--fw-400);
   font-size: var(--fs-400);
-  line-height: 1.556;
+  line-height: 1.4;
   font-style: normal;
   color: black;
   -webkit-font-smoothing: antialiased;
@@ -22492,6 +22492,7 @@ img.parallax-slider {
 }
 .section_hero {
   isolation: isolate;
+  margin-bottom: 6rem;
 }
 .section_hero .container-xl {
   position: relative;
@@ -22525,11 +22526,19 @@ img.parallax-slider {
   background: linear-gradient(90deg, transparent, hsl(var(--hsl-background)/0.9) 80%);
 }
 .section_hero__image {
-  aspect-ratio: 3/2;
+  aspect-ratio: 4/2.5;
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  top: calc(300px + 6rem);
+  top: calc(200px + 6rem);
+  width: calc(100vw - 1.5rem);
+}
+@media (min-width: 992px) {
+  .section_hero__image {
+    bottom: 0;
+    top: unset;
+    max-width: 60%;
+  }
 }
 .section_hero__image.left {
   left: 0.5rem;

@@ -1,5 +1,6 @@
 .section_hero {
     isolation: isolate;
+    margin-bottom: 6rem;
     .container-xl {
         position: relative;
         // height: min(950px,100vh);
@@ -33,10 +34,16 @@
         }
     }
     &__image {
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 4 / 2.5;
         object-fit: cover;
         position: absolute;
-        top: calc(300px + 6rem);
+        top: calc(200px + 6rem);
+        width: calc(100vw - 1.5rem);
+        @media (min-width:992px) {
+            bottom: 0;
+            top: unset;
+            max-width: 60%;
+        }
         &.left {
             left: .5rem;
         }
