@@ -11,7 +11,7 @@ $lineColour = $theme == 'Dark' ? '#de1b3c' : '#22806c';
     <div class="container-xl">
         <div class="section_hero__images">
             <div class="section_hero__background <?=$orientation?>" data-aos="fade-<?=$orientation?>" style="background-image:url('<?=get_stylesheet_directory_uri()?>/img/bg-<?=$background?>--<?=$theme?>.svg')"></div>
-            <?=wp_get_attachment_image(get_field('image'),'large',false,array('class' => 'section_hero__image ' . $orientation, 'data-aos' => $fade, 'data-aos-offset' => 300))?>
+            <img src="<?=wp_get_attachment_image_src(get_field('image'),'large')?>" class="section_hero__image <?=$orientation?>" data-aos="<?=$fade?>" data-aos-offset="300">
         </div>
         <div class="section_hero__content sticky-top <?=$orientation?>">
             <div class="line <?=$line?>" data-aos="fade"></div>
