@@ -22858,6 +22858,10 @@ img.parallax-slider {
   margin-inline: auto;
 }
 
+.theme-light .case_study__hero::before {
+  background-color: hsl(var(--hsl-light-400)/0.8);
+}
+
 .caseStudies .case_study__hero {
   margin-bottom: 2rem;
 }

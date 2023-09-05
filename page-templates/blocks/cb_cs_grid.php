@@ -14,7 +14,7 @@ foreach ($terms as $t) {
 }
 ?>
 </div>
-<div id="csgrid" class="row mx-0">
+<div id="csgrid" class="row mx-0 mb-5">
     <?php
     $d = 0;
 $q = new WP_Query(array(

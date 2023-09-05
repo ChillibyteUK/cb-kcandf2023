@@ -25,7 +25,7 @@ $style = $terms[0]->slug;
             <div class="case_study__process" data-aos="fade">
                 <?=$term?>
             </div>
-            <div class="case_study__nav">
+            <!-- div class="case_study__nav">
                 <?php
 $prev_post = get_previous_post();
 if($prev_post) {
@@ -44,7 +44,7 @@ if($next_post) {
     echo '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class=" ">next</a>';
 }
 ?>
-            </div>
+            </div -->
         </div>
 
         <?=apply_filters('the_content', get_the_content())?>
@@ -55,7 +55,12 @@ if($next_post) {
         <div class="container-xl">
         <div class="case_study__footer-nav">
                 <?php
-echo '<a href="/case-studies/" class="text-red">back</a>';
+if (get_field('theme',get_the_ID()) == 'Light') {
+    echo '<a href="/health/case-studies/" class="text-red">back</a>';
+}
+else {
+    echo '<a href="/case-studies/" class="text-red">back</a>';
+}
 $next_post = get_next_post();
 
 if($next_post) {
