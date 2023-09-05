@@ -75,6 +75,7 @@ add_action('wp_footer', function () use ($uTerms) {
            return str.toLowerCase().replace(/\s+/g, '-');
         }
 
+        /* Filter Buttons */
         const jsonArray = <?=$uTerms?>;
 
         var container = document.getElementById('filters');
@@ -99,7 +100,7 @@ add_action('wp_footer', function () use ($uTerms) {
             }
         }
 
-
+        /* The Grid */
         var $grid = $('#csgrid').isotope({
             itemSelector: '.caseStudy',
             percentPosition: true,
@@ -135,6 +136,21 @@ add_action('wp_footer', function () use ($uTerms) {
             })
         }
 
+        /* filter on load */
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Get the filter value from the URL parameter, e.g., ?filter=category1
+        var filterValue = getUrlParameter('filter');
+
+        // Apply the filter if filterValue is not empty
+        if (filterValue !== '') {
+            $grid.isotope({ filter: '.' + filterValue });
+        }
 
     })(jQuery);
 </script>
