@@ -24,14 +24,23 @@
 
 .btn-filter {
     font-size: var(--fs-400);
+    &:hover {
+        border-bottom: 1px solid var(--col-red-400);
+    }
     &.active {
         color: var(--col-red-400);
         border-bottom: 1px solid var(--col-red-400);
     }
 }
 .theme-light {
-    .btn-filter.active {
-        color: var(--col-green-400);
-        border-bottom: 1px solid var(--col-green-400);
+    .btn-filter {
+        &:hover {
+            color: var(--col-dark-400);
+            border-bottom: 1px solid var(--col-green-400);
+        }
+        &.active {
+            color: var(--col-green-400);
+            border-bottom: 1px solid var(--col-green-400);
+        }
     }
 }
