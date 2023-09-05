@@ -22377,6 +22377,14 @@ footer .container-xl::after {
   color: var(--col-light-400);
 }
 
+.btn-filter {
+  font-size: var(--fs-400);
+}
+.btn-filter.active {
+  color: var(--col-red-400);
+  border-bottom: 1px solid var(--col-red-400);
+}
+
 img.parallax-slider {
   margin-top: 40px;
 }
@@ -23087,6 +23095,10 @@ a.anchor {
   position: relative;
   top: calc(var(--h-top) * -1);
   visibility: hidden;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {

@@ -2,8 +2,8 @@
 $theme = get_field('site');
 ?>
 <div class="container-xl">
-<div class="filters my-4" id="filters">
-    <a data-filter="*" class="pointer btn btn-red active mb-2">Show All</a>
+<div class="filters d-flex justify-content-evenly my-4" id="filters">
+    <a id="filter-button-all" data-filter="*" class="pointer btn-filter active mb-2">All</a>
     <?php
     /*
     $terms = get_terms(array(
@@ -87,7 +87,8 @@ add_action('wp_footer', function () use ($uTerms) {
             // Create <a> element
             var aElement = document.createElement('a');
             aElement.setAttribute('data-filter', '.'+slug);
-            aElement.className = 'btn btn-red mb-2';
+            aElement.setAttribute('id', 'filter-button-'+slug);
+            aElement.className = 'pointer btn-filter mb-2';
             aElement.textContent = name;
 
             // Append the <a> element to the container
@@ -149,7 +150,11 @@ add_action('wp_footer', function () use ($uTerms) {
 
         // Apply the filter if filterValue is not empty
         if (filterValue !== '') {
+            toggleCategory('off');
             $grid.isotope({ filter: '.' + filterValue });
+            // Add 'active' class to the corresponding filter button
+            $('.btn-filter').removeClass('active'); // Remove 'active' class from all buttons
+            $('#filter-button-' + filterValue).addClass('active'); // Add 'active' class to the specific button
         }
 
     })(jQuery);

@@ -47,6 +47,10 @@ a.anchor {
     visibility: hidden;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 @media (min-width:992px) {
     .cols-lg-2 {
         columns: 2;

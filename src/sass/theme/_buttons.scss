@@ -21,3 +21,11 @@
     background-color: var(--col-red-400);
     color: var(--col-light-400);
 }
+
+.btn-filter {
+    font-size: var(--fs-400);
+    &.active {
+        color: var(--col-red-400);
+        border-bottom: 1px solid var(--col-red-400);
+    }
+}
