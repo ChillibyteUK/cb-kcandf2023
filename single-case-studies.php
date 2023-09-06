@@ -61,12 +61,14 @@ if (get_field('theme',get_the_ID()) == 'Light') {
 else {
     echo '<a href="/case-studies/" class="text-red">back</a>';
 }
+/*
 $next_post = get_next_post();
 
 if($next_post) {
     $next_title = strip_tags(str_replace('"', '', $next_post->post_title));
     echo '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="text-white">next</a>';
 }
+*/
 ?>
             </div>
         </div>
