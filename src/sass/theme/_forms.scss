@@ -20,7 +20,7 @@
 }
 
 .gfield {
-    margin-bottom: 15px;
+    margin-bottom: 0.5rem;
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -84,8 +84,8 @@ body .gform_wrapper .gform_footer button {
     @extend .btn-primary;
 }
 
-.gfield_checkbox,
-.gfield_radio {
-    display: flex;
-    justify-content: space-around;
-}
+// .gfield_checkbox,
+// .gfield_radio {
+//     display: flex;
+//     justify-content: space-around;
+// }
