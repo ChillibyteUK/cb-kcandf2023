@@ -22609,6 +22609,8 @@ img.parallax-slider {
 
 .line_block {
   background: linear-gradient(0deg, var(--col-dark-400) 80%, transparent 80%);
+}
+.line_block--padding {
   padding-bottom: 5rem;
 }
 .line_block__line {
@@ -22677,6 +22679,12 @@ img.parallax-slider {
 }
 .people__bio {
   font-size: var(--fs-300);
+}
+.people__linkedin {
+  color: var(--text-color);
+}
+.people__linkedin:hover {
+  color: var(--text);
 }
 
 .video_block .youtube-player {

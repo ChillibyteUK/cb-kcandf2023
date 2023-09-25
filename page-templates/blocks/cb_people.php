@@ -28,6 +28,15 @@ $class = $block['className'] ?? null;
                 <div class="people__bio">
                     <?=get_field('bio', $t)?>
                 </div>
+                <?php
+                if (get_field('linkedin_url', $t)) {
+                    ?>
+                <div class="people__linkedin">
+                    <a href="<?=get_field('linkedin_url')?>" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                    <?php
+                }
+                ?>
             </div>
             <?php
             }

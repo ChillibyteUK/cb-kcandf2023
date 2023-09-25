@@ -1,6 +1,8 @@
 .line_block {
     background: linear-gradient(0deg, var(--col-dark-400) 80%, transparent 80%);
-    padding-bottom: 5rem;
+    &--padding {
+        padding-bottom: 5rem;
+    }
     &__line {
         width: 9px;
         height: 265px;
