@@ -81,12 +81,12 @@
 
 body .gform_wrapper .gform_footer button {
     @extend .btn;
+    margin-inline: auto;
 }
 
 .theme-dark {
     .gform_wrapper .gform_footer button {
         @extend .btn-red;
-        margin-inline: auto;
     }
 }
 .theme-light {

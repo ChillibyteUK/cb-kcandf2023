@@ -22674,7 +22674,7 @@ footer .container-xl::after {
   height: 200px !important;
 }
 
-.theme-dark .gform_wrapper .gform_footer button {
+body .gform_wrapper .gform_footer button {
   margin-inline: auto;
 }
 
