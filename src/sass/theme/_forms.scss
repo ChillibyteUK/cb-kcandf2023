@@ -81,7 +81,17 @@
 
 body .gform_wrapper .gform_footer button {
     @extend .btn;
-    @extend .btn-primary;
+}
+
+.theme-dark {
+    .gform_wrapper .gform_footer button {
+        @extend .btn-red;
+    }
+}
+.theme-light {
+    .gform_wrapper .gform_footer button {
+        @extend .btn-green;
+    }
 }
 
 // .gfield_checkbox,

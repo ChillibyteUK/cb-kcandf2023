@@ -3305,31 +3305,31 @@ body .gform_wrapper .gform_footer .input-group-sm > button {
   opacity: 0.65;
 }
 
-.btn-primary, body .gform_wrapper .gform_footer button {
+.btn-primary {
   color: #fff;
   background-color: #333333;
   border-color: #333333;
 }
-.btn-primary:hover, body .gform_wrapper .gform_footer button:hover {
+.btn-primary:hover {
   color: #fff;
   background-color: #2b2b2b;
   border-color: #292929;
 }
-.btn-check:focus + .btn-primary, body .gform_wrapper .gform_footer .btn-check:focus + button, .btn-primary:focus, body .gform_wrapper .gform_footer button:focus {
+.btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
   background-color: #2b2b2b;
   border-color: #292929;
   box-shadow: 0 0 0 0.25rem rgba(82, 82, 82, 0.5);
 }
-.btn-check:checked + .btn-primary, body .gform_wrapper .gform_footer .btn-check:checked + button, .btn-check:active + .btn-primary, body .gform_wrapper .gform_footer .btn-check:active + button, .btn-primary:active, body .gform_wrapper .gform_footer button:active, .btn-primary.active, body .gform_wrapper .gform_footer button.active, .show > .btn-primary.dropdown-toggle, body .gform_wrapper .gform_footer .show > button.dropdown-toggle {
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #292929;
   border-color: #262626;
 }
-.btn-check:checked + .btn-primary:focus, body .gform_wrapper .gform_footer .btn-check:checked + button:focus, .btn-check:active + .btn-primary:focus, body .gform_wrapper .gform_footer .btn-check:active + button:focus, .btn-primary:active:focus, body .gform_wrapper .gform_footer button:active:focus, .btn-primary.active:focus, body .gform_wrapper .gform_footer button.active:focus, .show > .btn-primary.dropdown-toggle:focus, body .gform_wrapper .gform_footer .show > button.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(82, 82, 82, 0.5);
 }
-.btn-primary:disabled, body .gform_wrapper .gform_footer button:disabled, .btn-primary.disabled, body .gform_wrapper .gform_footer button.disabled {
+.btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
   background-color: #333333;
   border-color: #333333;
@@ -22589,12 +22589,12 @@ footer .container-xl::after {
   color: var(--col-light-400);
 }
 
-.btn-green {
+.btn-green, .theme-light .gform_wrapper .gform_footer button {
   background-color: var(--col-green-400);
   color: var(--col-light-400);
 }
 
-.btn-red {
+.btn-red, .theme-dark .gform_wrapper .gform_footer button {
   background-color: var(--col-red-400);
   color: var(--col-light-400);
 }
@@ -23182,7 +23182,7 @@ img.parallax-slider {
 .caseStudies .case_study__hero {
   margin-bottom: 2rem;
 }
-.caseStudies .btn-red:not(.active) {
+.caseStudies .btn-red:not(.active), .caseStudies .theme-dark .gform_wrapper .gform_footer button:not(.active), .theme-dark .gform_wrapper .gform_footer .caseStudies button:not(.active) {
   background-color: transparent;
   border: 1px solid var(--col-red-400);
 }
