@@ -22674,6 +22674,10 @@ footer .container-xl::after {
   height: 200px !important;
 }
 
+.theme-dark .gform_wrapper .gform_footer button {
+  margin-inline: auto;
+}
+
 img.parallax-slider {
   margin-top: 40px;
 }
