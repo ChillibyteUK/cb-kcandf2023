@@ -22827,12 +22827,17 @@ img.parallax-slider {
   background: linear-gradient(90deg, transparent, hsl(var(--hsl-background)/0.9) 80%);
 }
 .section_hero__image {
-  aspect-ratio: 4/2.5;
+  aspect-ratio: 1;
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
   top: calc(200px + 6rem);
   width: calc(100vw - 1.5rem);
+}
+@media (min-width: 992px) {
+  .section_hero__image {
+    aspect-ratio: 4/2.5;
+  }
 }
 @media (min-width: 992px) {
   .section_hero__image {

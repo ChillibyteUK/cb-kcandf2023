@@ -34,7 +34,10 @@
         }
     }
     &__image {
-        aspect-ratio: 4 / 2.5;
+        aspect-ratio: 1;
+        @media (min-width:992px) {
+            aspect-ratio: 4 / 2.5;
+        }
         object-fit: cover;
         position: absolute;
         top: calc(200px + 6rem);
