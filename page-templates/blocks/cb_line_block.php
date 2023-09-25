@@ -10,7 +10,11 @@ $classes = get_field('padding') ? 'line_block--padding' : '';
             <?=get_field('content')?></div>
         <div class="form_block">
             <?=get_field('pre_form')?>
-            <?=do_shortcode('[gravityform id="' . get_field('form_id') . '" title="false"]')?>
+            <?php
+            if (get_field('form_id')) {
+                echo do_shortcode('[gravityform id="' . get_field('form_id') . '" title="false"]');
+            }
+            ?>
             <?=get_field('post_form')?>
         </div>
     </div>
