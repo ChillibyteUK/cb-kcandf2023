@@ -1,8 +1,9 @@
 <?php
-
-$classes = get_field('padding') ? 'line_block--padding' : '';
+$theme = get_field('theme', get_the_ID()) == 'Dark' ? 'Agency' : 'Pharma';
+$class = $block['className'] ?? null;
+$class .= get_field('padding') ? 'line_block--padding' : '';
 ?>
-<section class="line_block <?=$classes?>">
+<section class="line_block <?=$class?>">
     <div class="line_block__line" data-aos="fade"></div>
     <a id="form" class="anchor"></a>
     <div class="container-xl">

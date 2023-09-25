@@ -54,9 +54,11 @@
         font-size: var(--fs-300);
     }
     &__linkedin {
-        color: var(--text-color);
-        &:hover {
-            color: var(--text);
+        a {
+            color: var(--text-color);
+            &:hover {
+                color: var(--text);
+            }
         }
     }
 }
