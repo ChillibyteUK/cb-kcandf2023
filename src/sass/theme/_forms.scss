@@ -1,3 +1,8 @@
+.gfield_checkbox {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
 .form-control {
     font-weight: 300;
     font-size: 0.889rem;
