@@ -22621,7 +22621,11 @@ footer .container-xl::after {
 
 .gfield_checkbox {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 992px) {
+  .gfield_checkbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form-control, .gform_wrapper.gravity-theme input[type=text],
@@ -22635,8 +22639,6 @@ footer .container-xl::after {
 
 .gform_fields {
   list-style-type: none;
-  margin-right: -15px;
-  margin-left: -15px;
   padding: 0;
 }
 
