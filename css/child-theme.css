@@ -22462,7 +22462,7 @@ a.text-white:hover {
   color: var(--col-dark-400);
   background-image: url(../img/pattern-1.svg);
   background-repeat: repeat;
-  background-size: 30px;
+  background-size: 20px 15px;
 }
 .theme-dark .preHeader .has-bg {
   background-color: var(--col-light-400);
