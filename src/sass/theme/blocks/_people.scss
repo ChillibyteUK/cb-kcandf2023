@@ -23,6 +23,9 @@
     &__card {
         width: min( 30%, 90vw);
         min-width: 400px;
+
+        display: grid;
+        grid-template-rows: auto 1.4rem 2rem 1fr auto;
     }
     &__image {
         object-fit: cover;
