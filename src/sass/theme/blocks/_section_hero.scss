@@ -1,19 +1,27 @@
 .section_hero {
     isolation: isolate;
-    margin-bottom: 6rem;
+    @media (min-width:768px) {
+        margin-bottom: 6rem;
+    }
     .container-xl {
         position: relative;
         // height: min(950px,100vh);
-        height: 950px;
+        @media (min-width:768px) {
+            height: 950px;
+        }
     }
     &__images {
-        position: absolute;
-        inset: 0    ;
+        @media (min-width:768px) {
+            position: absolute;
+        }
+        inset: 0;
     }
     &__background {
-        position: absolute;
         inset: 0;
-        top: 300px;
+        @media (min-width:768px) {
+            position: absolute;
+            top: 300px;
+        }
         aspect-ratio: 5 / 2;
         width: 100%;
         background-size: cover;
@@ -35,14 +43,21 @@
     }
     &__image {
         aspect-ratio: 1;
-        @media (min-width:992px) {
+        @media (min-width:768px) {
             aspect-ratio: 4 / 2.5;
+            position: absolute;
         }
         object-fit: cover;
-        position: absolute;
-        top: calc(200px + 6rem);
+        top: 3rem;
+        margin-top: -2rem;
+        margin-bottom: 1rem;
+        @media (min-width:768px) {
+            top: calc(200px + 6rem);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
         width: calc(100vw - 1.5rem);
-        @media (min-width:992px) {
+        @media (min-width:768px) {
             bottom: 0;
             top: unset;
             max-width: 60%;
@@ -77,8 +92,10 @@
     &__title {
         width: min-content;
         white-space: break-space;
-        &.text-end {
-            margin-left: auto;
+        @media (min-width:768px) {
+            &.text-sm-end {
+                margin-left: auto;
+            }
         }
     }
 }

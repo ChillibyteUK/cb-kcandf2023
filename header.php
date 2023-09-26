@@ -119,7 +119,7 @@ if (is_front_page()) {
             <div>
                 <span class="has-bg">For our health work please visit our site.</span>
             </div>
-            <a href="/health/" class="btn btn-green">KC&F Health</a>
+            <a href="/health/" class="btn btn-green"><span class="d-none d-sm-block">KC&F Health</span><span class="d-sm-none"><i class="fa-solid fa-arrow-right"></i></span></a>
         </div>
     </div>
     <?php
@@ -131,7 +131,7 @@ if (is_page('health')) {
             <div>
                 <span class="has-bg">For our B2C & B2B work please visit our site.</span>
             </div>
-            <a href="/" class="btn btn-red">KC&F Agency</a>
+            <a href="/" class="btn btn-red"><span class="d-none d-sm-block">KC&F Agency</span><span class="d-sm-none"><i class="fa-solid fa-arrow-right"></i></span></a>
         </div>
     </div>
     <?php

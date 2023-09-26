@@ -34,15 +34,26 @@
     }
 }
 .preHeader {
-    padding-block: 1rem;
-    font-size: var(--fs-600);
+    padding-block: 0.5rem;
     line-height: 1;
+    font-size: var(--fs-100);
+    @media (min-width:576px) {
+        font-size: var(--fs-600);
+    }
     .container-xl {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 1rem;
+        align-items: center;
+        // flex-wrap: wrap;
+        gap: 0.5rem;
         // grid-template-columns: auto 280px;
+    }
+    @media (max-width:576px) {
+        .btn {
+            width: 2rem !important;
+            min-width: unset;
+            padding: 0.25rem;
+        }
     }
 }
 

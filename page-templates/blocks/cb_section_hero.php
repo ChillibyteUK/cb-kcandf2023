@@ -3,7 +3,7 @@ $theme = get_field('theme',get_the_ID()) == 'Dark' ? 'wo' : 'dark';
 $background = get_field('background');
 $orientation = get_field('orientation');
 $fade = $orientation == 'left' ? 'fade-right' : 'fade-left';
-$text = $orientation == 'left' ? 'text-end' : 'text-start';
+$text = $orientation == 'left' ? 'text-sm-end' : 'text-sm-start';
 $line = $orientation == 'left' ? 'right' : 'left';
 $lineColour = $theme == 'Dark' ? '#de1b3c' : '#22806c';
 ?>
@@ -14,7 +14,7 @@ $lineColour = $theme == 'Dark' ? '#de1b3c' : '#22806c';
             <img src="<?=wp_get_attachment_image_url(get_field('image'),'large')?>" class="section_hero__image <?=$orientation?>" data-aos="<?=$fade?>" data-aos-offset="300">
         </div>
         <div class="section_hero__content sticky-top <?=$orientation?>">
-            <div class="line <?=$line?>" data-aos="fade"></div>
+            <div class="line <?=$line?> d-none d-sm-block" data-aos="fade"></div>
             <div class="section_hero__number <?=$text?>" data-aos="fade"><?=sprintf('%02d',get_field('section_number'))?></div>
             <h2 class="section_hero__title <?=$text?>" data-aos="fade"><?=get_field('title')?></h2>
         </div>
