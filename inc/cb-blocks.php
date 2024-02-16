@@ -40,10 +40,19 @@ function acf_blocks()
         ));
         acf_register_block_type(array(
             'name'				=> 'cb_video',
-            'title'				=> __('CB Video'),
+            'title'				=> __('CB Video (YouTube)'),
             'category'			=> 'layout',
             'icon'				=> 'cover-image',
             'render_template'	=> 'page-templates/blocks/cb_video.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_video_vimeo',
+            'title'				=> __('CB Video (Vimeo)'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_video_vimeo.php',
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));

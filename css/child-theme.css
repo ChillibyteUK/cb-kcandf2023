@@ -23244,6 +23244,16 @@ img.parallax-slider {
   border: 1px solid var(--col-red-400);
 }
 
+:root {
+  --_content_bg: hsl(0 0% 0% / 0.9);
+  --_title: var(--col-light-400);
+}
+
+.Light {
+  --_content_bg: hsl(0 0% 100% / 0.9);
+  --_title: var(--col-dark-400);
+}
+
 #csgrid .caseStudy {
   padding-inline: 0;
 }
@@ -23265,11 +23275,14 @@ img.parallax-slider {
   padding: 0.5rem;
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--_content_bg);
   display: grid;
   place-content: center;
   text-align: center;
   transition: opacity var(--transition);
+}
+#csgrid .caseStudy_card__content .article-title {
+  color: var(--_title);
 }
 #csgrid .caseStudy_card__content .article-category {
   font-size: var(--fs-300);

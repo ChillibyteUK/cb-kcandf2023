@@ -1,10 +1,10 @@
 {
-    "key": "group_64e8c8a4417f4",
-    "title": "CB Video (YouTube)",
+    "key": "group_65cf3af34bca0",
+    "title": "CB Video (Vimeo)",
     "fields": [
         {
-            "key": "field_64e8c8a434ba2",
-            "label": "CB Video (YouTube)",
+            "key": "field_65cf3af374852",
+            "label": "CB Video (Vimeo)",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -21,16 +21,16 @@
             "esc_html": 0
         },
         {
-            "key": "field_64e8c8b934ba3",
-            "label": "Video ID",
-            "name": "video_id",
+            "key": "field_65cf3b0474853",
+            "label": "Vimeo ID",
+            "name": "vimeo_id",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Just the number at the end: https:\/\/vimeo.com\/manage\/videos\/<strong>123456789<\/strong>",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -39,31 +39,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_64e8ca54fb182",
-            "label": "Alt Preview",
-            "name": "alt_preview",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "thumbnail"
         }
     ],
     "location": [
@@ -71,7 +46,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/cb-video"
+                "value": "acf\/cb-video-vimeo"
             }
         ]
     ],
@@ -84,5 +59,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708079945
+    "modified": 1708079922
 }
