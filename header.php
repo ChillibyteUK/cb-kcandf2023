@@ -147,35 +147,27 @@ if (is_page('health')) {
 ?>
                 <a href="<?=$home?>" class="logo"
                     aria-label="Home"></a>
-                <?php
-                    if (!preg_match("/^\/health\//", $_SERVER['REQUEST_URI'])) {
-                        ?>
                 <div class="button-container text-end d-flex align-items-center justify-content-end">
                     <button class="navbar-toggle mt-2 collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
                         aria-label="Toggle navigation">
                     </button>
                 </div>
-                <?php
-                    }
-?>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
                 <?php
-                if (!preg_match("/^\/health\//", $_SERVER['REQUEST_URI'])) {
                     $menu = get_field('theme') == 'Dark' ? 'agency_nav' : 'pharma_nav';
-                    wp_nav_menu(
-                        array(
-                                'theme_location'  => $menu,
-                                'container_class' => 'container-xl w-100',
-                                'menu_class'      => 'navbar-nav justify-content-around',
-                                'fallback_cb'     => '',
-                                'menu_id'         => 'navbarr',
-                                'depth'           => 3,
-                                'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-                            )
-                    );
-                }
+wp_nav_menu(
+    array(
+            'theme_location'  => $menu,
+            'container_class' => 'container-xl w-100',
+            'menu_class'      => 'navbar-nav justify-content-around',
+            'fallback_cb'     => '',
+            'menu_id'         => 'navbarr',
+            'depth'           => 3,
+            'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+        )
+);
 ?>
                 <div class="preHeader navExtra py-4">
                     <div class="container-xl">
