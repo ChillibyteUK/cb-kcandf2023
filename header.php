@@ -119,7 +119,8 @@ if (is_front_page()) {
             <div>
                 <span class="has-bg">For our health work please visit our site.</span>
             </div>
-            <a href="/health/" class="btn btn-green"><span class="d-none d-sm-block">KC&F Health</span><span class="d-sm-none"><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a href="/health/" class="btn btn-green"><span class="d-none d-sm-block">KC&F Health</span><span
+                    class="d-sm-none"><i class="fa-solid fa-arrow-right"></i></span></a>
         </div>
     </div>
     <?php
@@ -131,7 +132,8 @@ if (is_page('health')) {
             <div>
                 <span class="has-bg">For our B2C & B2B work please visit our site.</span>
             </div>
-            <a href="/" class="btn btn-red"><span class="d-none d-sm-block">KC&F Agency</span><span class="d-sm-none"><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a href="/" class="btn btn-red"><span class="d-none d-sm-block">KC&F Agency</span><span class="d-sm-none"><i
+                        class="fa-solid fa-arrow-right"></i></span></a>
         </div>
     </div>
     <?php
@@ -154,18 +156,20 @@ if (is_page('health')) {
             </div>
             <div class="collapse navbar-collapse" id="navbar">
                 <?php
-$menu = get_field('theme') == 'Dark' ? 'agency_nav' : 'pharma_nav';
-wp_nav_menu(
-    array(
-            'theme_location'  => $menu,
-            'container_class' => 'container-xl w-100',
-            'menu_class'      => 'navbar-nav justify-content-around',
-            'fallback_cb'     => '',
-            'menu_id'         => 'navbarr',
-            'depth'           => 3,
-            'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-        )
-);
+                if (!preg_match("/^\/health\//", $_SERVER['REQUEST_URI'])) {
+                    $menu = get_field('theme') == 'Dark' ? 'agency_nav' : 'pharma_nav';
+                    wp_nav_menu(
+                        array(
+                                'theme_location'  => $menu,
+                                'container_class' => 'container-xl w-100',
+                                'menu_class'      => 'navbar-nav justify-content-around',
+                                'fallback_cb'     => '',
+                                'menu_id'         => 'navbarr',
+                                'depth'           => 3,
+                                'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+                            )
+                    );
+                }
 ?>
                 <div class="preHeader navExtra py-4">
                     <div class="container-xl">
