@@ -9,6 +9,21 @@
             background-image: url(../img/bg-herringbone--wo.svg);
         }
     }
+    .case_study--creative {
+        .case_study__hero {
+            background-image: url(../img/bg-herringbone--wo.svg);
+        }
+    }
+    .case_study--performance {
+        .case_study__hero {
+            background-image: url(../img/bg-curves--wo.svg);
+        }
+    }
+    .case_study--strategy {
+        .case_study__hero {
+            background-image: url(../img/bg-herringbone--wo.svg);
+        }
+    }
     .case_study__process {
         color: var(--col-red-400);
     }
@@ -25,6 +40,21 @@
         }
     }
     .case_study--production {
+        .case_study__hero {
+            background-image: url(../img/bg-herringbone--dark.svg);
+        }
+    }
+    .case_study--creative {
+        .case_study__hero {
+            background-image: url(../img/bg-herringbone--dark.svg);
+        }
+    }
+    .case_study--performance {
+        .case_study__hero {
+            background-image: url(../img/bg-curves--dark.svg);
+        }
+    }
+    .case_study--strategy {
         .case_study__hero {
             background-image: url(../img/bg-herringbone--dark.svg);
         }
