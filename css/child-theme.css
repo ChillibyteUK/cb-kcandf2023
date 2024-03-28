@@ -23156,13 +23156,13 @@ img.parallax-slider {
   background-image: url(../img/bg-herringbone--wo.svg);
 }
 .theme-dark .case_study--creative .case_study__hero {
-  background-image: url(../img/bg-herringbone--wo.svg);
+  background-image: url(../img/bg-haring--wo.svg);
 }
 .theme-dark .case_study--performance .case_study__hero {
-  background-image: url(../img/bg-curves--wo.svg);
+  background-image: url(../img/bg-arrows--wo.svg);
 }
 .theme-dark .case_study--strategy .case_study__hero {
-  background-image: url(../img/bg-herringbone--wo.svg);
+  background-image: url(../img/bg-topography--wo.svg);
 }
 .theme-dark .case_study__process {
   color: var(--col-red-400);
@@ -23178,13 +23178,13 @@ img.parallax-slider {
   background-image: url(../img/bg-herringbone--dark.svg);
 }
 .theme-light .case_study--creative .case_study__hero {
-  background-image: url(../img/bg-herringbone--dark.svg);
+  background-image: url(../img/bg-haring--dark.svg);
 }
 .theme-light .case_study--performance .case_study__hero {
-  background-image: url(../img/bg-curves--dark.svg);
+  background-image: url(../img/bg-arrows--dark.svg);
 }
 .theme-light .case_study--strategy .case_study__hero {
-  background-image: url(../img/bg-herringbone--dark.svg);
+  background-image: url(../img/bg-topography--dark.svg);
 }
 .theme-light .case_study__process {
   color: var(--col-green-400);
